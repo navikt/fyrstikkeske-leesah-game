@@ -21,6 +21,8 @@ class QuizApplication(private val teamName: String, database: Database? = null):
         else if (question.category == "arithmetic") handleArithmetic(question)
 
         else if (question.category == "make-ingress") handleIngress(question)
+
+        else if (question.category == "NAV") handleNav(question)
     }
 
 
@@ -34,6 +36,13 @@ class QuizApplication(private val teamName: String, database: Database? = null):
 
     private fun handleIngress(question: Question) {
         answer(category = question.category, questionId = question.id(), answer = "fyrstikkeske-leesah-game.dev.intern.nav.no")
+    }
+    private fun handleNav(question: Question) {
+        val result = when (question.question) {
+            "På hvilken nettside finner man informasjon om rekruttering til NAV IT?" -> "detsombetyrnoe.no"
+            else -> "NAIS"
+        }
+        answer(category = question.category, questionId = question.id(), answer = result)
     }
 
     private fun handleArithmetic(question: Question) {
