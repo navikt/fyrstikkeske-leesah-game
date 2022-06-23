@@ -15,6 +15,7 @@ class QuizApplication(private val teamName: String, database: Database? = null):
 
     override fun handle(question: Question) {
         logger.log(question)
+
         if (question.category == "team-registration") handleRegisterTeam(question)
     }
 
