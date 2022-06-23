@@ -41,4 +41,15 @@ internal class QuizApplicationTest {
 
     }
 
+    @Test
+    fun `håndter ingress`() {
+        val teamNavn = "fyrstikkeske"
+        val qa = QuizApplication(teamNavn)
+        qa.handle(Question(category = "make-ingress", question = ""))
+
+        val messages = qa.messages()
+        assertEquals(1, messages.size)
+        assertEquals("fyrstikkeske-leesah-game.dev.intern.nav.no", (messages[0] as Answer).answer)
+    }
+
 }

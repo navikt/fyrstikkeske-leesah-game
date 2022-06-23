@@ -19,6 +19,8 @@ class QuizApplication(private val teamName: String, database: Database? = null):
         if (question.category == "team-registration") handleRegisterTeam(question)
 
         else if (question.category == "arithmetic") handleArithmetic(question)
+
+        else if (question.category == "make-ingress") handleIngress(question)
     }
 
 
@@ -29,6 +31,10 @@ class QuizApplication(private val teamName: String, database: Database? = null):
     /**
      * Spørsmål handlers
      */
+
+    private fun handleIngress(question: Question) {
+        answer(category = question.category, questionId = question.id(), answer = "fyrstikkeske-leesah-game.dev.intern.nav.no")
+    }
 
     private fun handleArithmetic(question: Question) {
         val biter = question.question.split(" ")

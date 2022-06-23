@@ -5,6 +5,9 @@ metadata:
   namespace: leesah-quiz
   labels:
     team: leesah-quiz
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "256M"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
 spec:
   image: {{ image }}
   part: 8080
@@ -27,3 +30,7 @@ spec:
   env:
     - name: QUIZ_TOPIC
       value: "leesah-quiz.leesah-rapid-v2"
+  service:
+    protocol: http
+    ingresses:
+      fyrstikkeske-leesah-game.dev.intern.nav.no
