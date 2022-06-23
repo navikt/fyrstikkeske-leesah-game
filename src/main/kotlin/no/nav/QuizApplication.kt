@@ -16,13 +16,12 @@ class QuizApplication(private val teamName: String, database: Database? = null):
     override fun handle(question: Question) {
         logger.log(question)
 
-        if (question.category == "team-registration") handleRegisterTeam(question)
-
-        else if (question.category == "arithmetic") handleArithmetic(question)
-
-        else if (question.category == "make-ingress") handleIngress(question)
-
-        else if (question.category == "NAV") handleNav(question)
+        when (question.category) {
+            "team-registration" -> handleRegisterTeam(question)
+            "arithmetic" -> handleArithmetic(question)
+            "make-ingress" -> handleIngress(question)
+            "NAV" -> handleNav(question)
+        }
     }
 
 
