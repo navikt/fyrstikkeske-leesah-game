@@ -29,7 +29,7 @@ class QuizApplication(private val teamName: String, database: Database? = null):
      */
 
     private fun handleRegisterTeam(question: Question) {
-        TODO("Her må du skrive kode ;)")
+        answer(category =  question.category, questionId = question.id(), answer = "fyrstikkeske"   )
     }
 
 }
