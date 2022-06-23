@@ -33,4 +33,4 @@ spec:
   service:
     protocol: http
     ingresses:
-      fyrstikkeske-leesah-game.dev.intern.nav.no
+     - https://fyrstikkeske-leesah-game.dev.intern.nav.no
