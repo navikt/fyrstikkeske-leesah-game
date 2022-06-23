@@ -10,7 +10,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
 spec:
   image: {{ image }}
-  part: 8080
+  port: 8080
   strategy:
     type: Recreate
   liveness:
