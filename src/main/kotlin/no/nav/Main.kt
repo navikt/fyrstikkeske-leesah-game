@@ -38,7 +38,6 @@ fun ktorServer(appName: String, isReady: () -> Boolean): ApplicationEngine = emb
 
     /**
      * Konfigurasjon av Webserver (Ktor https://ktor.io/)
-     *
      */
     log = logger
     connector {
