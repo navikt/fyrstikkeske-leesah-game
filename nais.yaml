@@ -32,5 +32,5 @@ spec:
       value: "leesah-quiz.leesah-rapid-v2"
   service:
     protocol: http
-    ingresses:
-     - https://fyrstikkeske-leesah-game.dev.intern.nav.no
+  ingresses:
+    - https://fyrstikkeske-leesah-game.dev.intern.nav.no
